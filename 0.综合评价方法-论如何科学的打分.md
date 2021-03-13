@@ -1,6 +1,6 @@
 # 综合评价方法-论如何科学的打分
 
-### 前言
+#### 前言
 
 如果我们想评价一个事物 ，只从单一指标出发评价，会显得很不公正也不科学
 
@@ -26,7 +26,7 @@
 
 综合评价方法有很多 大致分类如下 如下图:
 
-<img src="https://i.loli.net/2021/03/05/n4vxlO7PiksWE5e.png" alt="saGr7j.png" style="zoom:50%;max-width:50%;" />
+<img src="https://i.loli.net/2021/03/05/n4vxlO7PiksWE5e.png" alt="saGr7j.png" style="zoom:50%;max-width:80%;" />
 
 总体来说 分为两大类 : 计算指标的权重和直接排序
 
@@ -50,11 +50,11 @@
 什么是数据的量纲化和同向化？
 
 - [熵值法](./1.熵权法.md)
-- [独立性权重]()
-- 信息量权重
-- AHP层次法
-- CRITIC权重法
-- TOPSIS法
+- [独立性权重](./2.独立性权重.md)
+- [信息量权重](./3.信息量权重.md)
+- [AHP层次分析法](./4.AHP层次分析法.md)
+- [CRITIC权重法](./5.CRITIC权重法.md)
+- [TOPSIS法](./6.TOPSIS法.md)
 
 评价结果、评价方法的好坏，本身就具有很强的主观性。
 
@@ -70,12 +70,24 @@
 
 #### 数据输入
 
-设共有 ![[公式]](https://www.zhihu.com/equation?tex=n) 个待评价对象，每个对象都有 ![[公式]](https://www.zhihu.com/equation?tex=m+) 个指标(属性)，即 n*m 的二维数组，如下所示：
-
-<img src="https://i.loli.net/2021/03/05/AqKzwRxh73UWTui.png" alt="[公式]" style="zoom:50%;max-width:50%;" />
+设共有 $n$个待评价对象，每个对象都有$m$个指标(属性)，即$n*m$ 的二维数组，如下所示：
+$$
+\begin{pmatrix}  
+  x_{11} & x_{12} & \cdots & x_{1m} \\  
+  x_{21} & x_{22} & \cdots & x_{2m} \\  
+  \vdots & \vdots & \ddots & \vdots \\  
+  x_{n1} & x_{n2} & \cdots & x_{nm}  
+\end{pmatrix}
+$$
 
 #### 数据输出
 
 各个评价对象的得分 即n个值得一维数组，如下所示:
+$$
+\begin{pmatrix}  
+  x_{1\_score} & x_{2\_score} & \dots  & x_{n\_score}
+\end{pmatrix}
+$$
 
-<img src="https://i.loli.net/2021/03/05/5eKrhUETacBCyOP.png" style="zoom:50%;max-width:50%;" />
+
+
